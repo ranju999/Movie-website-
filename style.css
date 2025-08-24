@@ -1,0 +1,235 @@
+/* --- General Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* --- Header / Navbar --- */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* --- Section Title --- */
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #444;
+}
+
+/* --- Movie Grid (User Panel) --- */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-card h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.movie-card .btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.movie-card .btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- Movie Page (Single) --- */
+.movie-details {
+    background: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.movie-details h1 {
+    font-size: 2.5em;
+}
+.movie-details img {
+    max-width: 300px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+.movie-details p {
+    line-height: 1.6;
+}
+.download-links {
+    margin: 20px 0;
+    clear: both;
+}
+.download-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.download-links a:hover {
+    background-color: #218838;
+}
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* --- Admin Panel --- */
+.admin-login, .admin-form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.admin-login h2, .admin-form-container h2 {
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Admin Dashboard Layout */
+.admin-dashboard {
+    display: flex;
+}
+.sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.sidebar a:hover {
+    background-color: #34495e;
+}
+.main-panel {
+    flex-grow: 1;
+    padding: 20px;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.stat-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.stat-card h3 {
+    margin: 0;
+    color: #555;
+}
+.stat-card p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
