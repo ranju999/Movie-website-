@@ -1,235 +1,156 @@
-/* --- General Styles --- */
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 .container {
     width: 90%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* --- Header / Navbar --- */
+/* Header / Navbar */
 .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
+    background-color: #1e1e1e;
+    padding: 1rem 0;
+    border-bottom: 2px solid #333;
 }
 
-.navbar a {
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    font-weight: bold;
 }
 
-.navbar a:hover {
-    background-color: #575757;
-    border-radius: 5px;
+.navbar nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-/* --- Section Title --- */
-.section-title {
+.navbar nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Latest Movies Section */
+.latest-movies {
+    padding: 2rem 0;
+}
+
+.latest-movies h2 {
     text-align: center;
-    font-size: 2em;
-    margin: 20px 0;
-    color: #444;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
-/* --- Movie Grid (User Panel) --- */
 .movie-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 1.5rem;
 }
 
 .movie-card {
-    background-color: #fff;
+    background-color: #1e1e1e;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
     text-align: center;
-    padding: 15px;
-    transition: transform 0.2s;
-}
-
-.movie-card:hover {
-    transform: translateY(-5px);
+    padding-bottom: 1rem;
 }
 
 .movie-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 5px;
 }
 
 .movie-card h3 {
-    font-size: 1.1em;
-    margin: 10px 0;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
 }
 
-.movie-card .btn {
-    display: block;
-    width: 80%;
-    margin: 10px auto 0;
-    padding: 10px;
+.btn-download {
+    display: inline-block;
     background-color: #007bff;
     color: #fff;
-    border: none;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
-    cursor: pointer;
-}
-.movie-card .btn:hover {
-    background-color: #0056b3;
+    font-weight: bold;
+    margin-top: 0.5rem;
 }
 
+/* Movie Details Page */
+.movie-details-page {
+    padding: 2rem 0;
+    text-align: center;
+}
 
-/* --- Movie Page (Single) --- */
-.movie-details {
-    background: #fff;
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+.movie-poster-large {
+    max-width: 100%;
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
 }
-.movie-details h1 {
-    font-size: 2.5em;
+
+.movie-info h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
 }
-.movie-details img {
-    max-width: 300px;
-    float: left;
-    margin-right: 20px;
-    border-radius: 8px;
-}
-.movie-details p {
+
+.movie-info p {
+    text-align: left;
     line-height: 1.6;
 }
+
 .download-links {
-    margin: 20px 0;
-    clear: both;
+    margin: 2rem 0;
 }
-.download-links a {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    text-decoration: none;
+
+.download-links .btn-download,
+.download-links .btn-telegram {
+    margin: 5px;
+}
+
+.btn-telegram {
+    background-color: #0088cc; /* Telegram blue */
+    color: #fff;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
-.download-links a:hover {
-    background-color: #218838;
-}
+
+
 .back-link {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 2rem;
     color: #007bff;
     text-decoration: none;
 }
 
-
-/* --- Footer --- */
+/* Footer */
 .footer {
+    background-color: #1e1e1e;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    background-color: #333;
-    color: #fff;
-}
-
-/* --- Admin Panel --- */
-.admin-login, .admin-form-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-.admin-login h2, .admin-form-container h2 {
-    margin-bottom: 20px;
-}
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.btn {
-    padding: 12px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-}
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Admin Dashboard Layout */
-.admin-dashboard {
-    display: flex;
-}
-.sidebar {
-    width: 220px;
-    background: #2c3e50;
-    color: white;
-    min-height: 100vh;
-    padding: 20px;
-}
-.sidebar a {
-    display: block;
-    color: white;
-    padding: 12px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-.sidebar a:hover {
-    background-color: #34495e;
-}
-.main-panel {
-    flex-grow: 1;
-    padding: 20px;
-}
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.stat-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.stat-card h3 {
-    margin: 0;
-    color: #555;
-}
-.stat-card p {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 10px 0 0;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
 }
