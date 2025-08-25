@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Top Navbar -->
+        <header class="top-navbar">
+            <div class="logo">AV Botz Admin</div>
+            <nav>
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="#">Movies</a>
+                <a href="#">Reports</a>
+                <a href="admin-login.html" class="logout">Logout</a>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="add-movie.html">➕ Add Movie</a></li>
+                    <li><a href="#">✏️ Edit/Delete Movie</a></li>
+                    <li><a href="#">📊 Reports</a></li>
+                    <li><a href="#">⚙️ Settings</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Panel -->
+            <main class="main-panel">
+                <h1>Dashboard</h1>
+                <p>Welcome back, Admin!</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Movies</h3>
+                        <p>120</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Downloads</h3>
+                        <p>5,400</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Top Movie</h3>
+                        <p>Movie XYZ</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Users Online</h3>
+                        <p>45</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
