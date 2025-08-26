@@ -4,69 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Movie</title>
-    <link rel="stylesheet" href="admin-style.css">
+    <!-- एडमिन की CSS फाइल admin-style.css होनी चाहिए -->
+    <link rel="stylesheet" href="admin-style.css"> 
 </head>
 <body>
-
     <div class="admin-wrapper">
-        <!-- Top Navbar -->
         <header class="top-navbar">
             <div class="logo">AV Botz Admin</div>
             <nav>
                 <a href="admin-dashboard.html">Dashboard</a>
-                <a href="#">Movies</a>
-                <a href="#">Reports</a>
-                <a href="admin-login.html" class="logout">Logout</a>
+                <a href="index.html" class="logout">Logout</a>
             </nav>
         </header>
-
         <div class="main-content">
-            <!-- Sidebar -->
             <aside class="sidebar">
                 <h3>Menu</h3>
                 <ul>
                     <li class="active"><a href="add-movie.html">➕ Add Movie</a></li>
                     <li><a href="#">✏️ Edit/Delete Movie</a></li>
-                    <li><a href="#">📊 Reports</a></li>
-                    <li><a href="#">⚙️ Settings</a></li>
                 </ul>
             </aside>
-
-            <!-- Main Panel -->
             <main class="main-panel">
                 <h1>Add New Movie</h1>
-                
                 <div class="form-container">
-                    <form>
+                    <!-- यह फॉर्म डेटा को हमारे सर्वरलेस फंक्शन पर भेजेगा -->
+                    <form action="/api/add-movie" method="POST">
                         <div class="form-group">
                             <label for="title">Movie Title</label>
-                            <input type="text" id="title" placeholder="Enter movie title">
+                            <input type="text" id="title" name="movieTitle" placeholder="Enter movie title" required>
                         </div>
                         <div class="form-group">
                             <label for="description">Description (Storyline)</label>
-                            <textarea id="description" rows="5" placeholder="Enter short storyline"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="poster">Poster Upload</label>
-                            <input type="file" id="poster">
+                            <textarea id="description" name="description" rows="5" placeholder="Enter short storyline"></textarea>
                         </div>
                         <hr>
                         <h3>Download Links</h3>
                         <div class="form-group">
                             <label for="link480p">Download Link 480p</label>
-                            <input type="url" id="link480p" placeholder="http://example.com/movie-480p.mkv">
+                            <input type="url" id="link480p" name="link480p" placeholder="http://example.com/movie-480p.mkv">
                         </div>
                          <div class="form-group">
                             <label for="link720p">Download Link 720p</label>
-                            <input type="url" id="link720p" placeholder="http://example.com/movie-720p.mkv">
+                            <input type="url" id="link720p" name="link720p" placeholder="http://example.com/movie-720p.mkv">
                         </div>
                          <div class="form-group">
                             <label for="link1080p">Download Link 1080p</label>
-                            <input type="url" id="link1080p" placeholder="http://example.com/movie-1080p.mkv">
+                            <input type="url" id="link1080p" name="link1080p" placeholder="http://example.com/movie-1080p.mkv">
                         </div>
                          <div class="form-group">
                             <label for="telegram">Telegram Link</label>
-                            <input type="url" id="telegram" placeholder="https://t.me/yourchannel/...">
+                            <input type="url" id="telegram" name="telegramLink" placeholder="https://t.me/yourchannel/...">
                         </div>
                         <button type="submit" class="btn">Save Movie</button>
                     </form>
@@ -74,6 +61,5 @@
             </main>
         </div>
     </div>
-
 </body>
-  </html>
+                                </html>
