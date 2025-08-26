@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const url = require('url');
 
-// --- MongoDB कनेक्शन ---
-//  यह कनेक्शन स्ट्रिंग Vercel Environment Variable से आएगी
 const mongoURI = process.env.MONGO_URI;
 
 // डेटाबेस से कनेक्ट करने के लिए एक फंक्शन
