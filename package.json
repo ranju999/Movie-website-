@@ -1,0 +1,12 @@
+{
+  "name": "movie-website",
+  "version": "1.0.0",
+  "description": "Movie website with MongoDB backend for Vercel",
+  "main": "api/add-movie.js",
+  "scripts": {
+    "start": "node api/add-movie.js"
+  },
+  "dependencies": {
+    "mongoose": "^6.0.0" 
+  }
+}
