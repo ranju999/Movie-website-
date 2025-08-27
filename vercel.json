@@ -1,20 +1,12 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "api/add-movie.js",
-            "use": "@vercel/node"
-        }
+        { "src": "api/add-movie.js", "use": "@vercel/node" },
+        { "src": "api/get-movies.js", "use": "@vercel/node" }
     ],
     "routes": [
-        {
-            "src": "/api/add-movie",
-            "dest": "/api/add-movie.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/public/$1"
-        }
+        { "src": "/api/add-movie", "dest": "/api/add-movie.js" },
+        { "src": "/api/get-movies", "dest": "/api/get-movies.js" },
+        { "src": "/(.*)", "dest": "/public/$1" }
     ]
 }
-
