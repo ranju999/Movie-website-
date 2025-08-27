@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Movie Download Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AV Botz Movies</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="admin-login.html" style="color:#007bff;">Admin Panel</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="latest-movies">
+            <h2>🎬 Latest Movies</h2>
+            <!-- मूवी कार्ड्स यहाँ JavaScript से डाले जाएंगे -->
+            <div id="movie-grid" class="movie-grid">
+                <p id="loading-message">Loading movies...</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AV Botz Movies. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // यह स्क्रिप्ट पेज लोड होने पर चलेगी
+        window.onload = async () => {
+            const movieGrid = document.getElementById('movie-grid');
+            const loadingMessage = document.getElementById('loading-message');
+
+            try {
+                // हमारे get-movies API से डेटा fetch करें
+                const response = await fetch('/api/get-movies');
+                const movies = await response.json();
+
+                loadingMessage.style.display = 'none'; // लोडिंग संदेश छिपाएं
+
+                if (movies.length === 0) {
+                    movieGrid.innerHTML = '<p>No movies found.</p>';
+                    return;
+                }
+
+                // हर मूवी के लिए एक HTML कार्ड बनाएं और ग्रिड में डालें
+                movies.forEach(movie => {
+                    const movieCard = `
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/250x350.png?text=${movie.title.replace(/ /g, '+')}" alt="${movie.title}">
+                            <h3>${movie.title}</h3>
+                            <a href="movie-page.html?id=${movie._id}" class="btn-download">Download</a>
+                        </div>
+                    `;
+                    movieGrid.innerHTML += movieCard;
+                });
+
+            } catch (error) {
+                loadingMessage.innerText = 'Failed to load movies. Please try again later.';
+                console.error('Error fetching movies:', error);
+            }
+        };
+    </script>
+</body>
+</html>
