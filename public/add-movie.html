@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Movie</title>
+    <link rel="stylesheet" href="admin-style.css"> 
+</head>
+<body>
+    <div class="admin-wrapper">
+        <header class="top-navbar">
+            <div class="logo">AV Botz Admin</div>
+            <nav><a href="admin-dashboard.html">Dashboard</a><a href="index.html" class="logout">Logout</a></nav>
+        </header>
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>Menu</h3>
+                <ul><li class="active"><a href="add-movie.html">➕ Add Movie</a></li></ul>
+            </aside>
+            <main class="main-panel">
+                <h1>Add New Movie</h1>
+                <div class="form-container">
+                    <form action="/api/add-movie" method="POST">
+                        <div class="form-group"><label for="title">Movie Title</label><input type="text" id="title" name="title" required></div>
+                        <div class="form-group"><label for="description">Description</label><textarea id="description" name="description" rows="5"></textarea></div>
+                        <hr>
+                        <h3>Download Links</h3>
+                        <div class="form-group"><label for="link480p">Link 480p</label><input type="url" id="link480p" name="link480p"></div>
+                        <div class="form-group"><label for="link720p">Link 720p</label><input type="url" id="link720p" name="link720p"></div>
+                        <div class="form-group"><label for="link1080p">Link 1080p</label><input type="url" id="link1080p" name="link1080p"></div>
+                        <div class="form-group"><label for="telegram">Telegram Link</label><input type="url" id="telegram" name="telegramLink"></div>
+                        <button type="submit" class="btn">Save Movie</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
