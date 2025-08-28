@@ -1,8 +1,0 @@
-{
-  "name": "movie-website-vercel",
-  "version": "1.0.0",
-  "description": "Full functional movie website for Vercel",
-  "dependencies": {
-    "mongoose": "^6.0.12"
-  }
-}
